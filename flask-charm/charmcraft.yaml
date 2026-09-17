@@ -26,6 +26,18 @@ description: |
 extensions:
   - flask-framework
 
+config:
+  options:
+    greeting:
+      description: |
+        The greeting to be returned by the Flask application.
+      default: "Hello, world!"
+      type: string
+
+requires:
+  postgresql:
+    interface: postgresql_client
+    optional: false
 # Uncomment the integrations used by your application
 # Integrations set to "optional: false" will block the charm
 # until the applications are integrated.
