@@ -48,14 +48,14 @@ config:
 # https://documentation.ubuntu.com/charmcraft/stable/reference/files/charmcraft-yaml-file/#containers
 containers:
   web:
-    resource: web
+    resource: web-image
 
 # This field populates the Resources tab on Charmhub.
 # https://documentation.ubuntu.com/charmcraft/stable/reference/files/charmcraft-yaml-file/#resources
 resources:
   # An OCI image resource for each container listed above.
   # You may remove this if your charm will run without a workload sidecar container.
-  some-container-image:
+  web-image:
     type: oci-image
     description: nginx OCI image
     # The upstream-source field is ignored by Charmcraft and Juju, but it can be
